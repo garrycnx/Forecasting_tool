@@ -13,11 +13,12 @@ import warnings
 warnings.filterwarnings("ignore")
 
 
-st.sidebar.header("📅 Forecast Settings")
-forecast_freq = st.sidebar.selectbox(
+st.header("📅 Forecast Settings")
+forecast_freq = st.selectbox(
     "Select Forecast Frequency",
     ["Daily", "Weekly", "Monthly", "Yearly"]
 )
+
 
 
 # Load and clean data
