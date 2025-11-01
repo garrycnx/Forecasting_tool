@@ -13,11 +13,17 @@ import warnings
 warnings.filterwarnings("ignore")
 
 
-st.header("📅 Forecast Settings")
-forecast_freq = st.selectbox(
-    "Select Forecast Frequency",
-    ["Daily", "Weekly", "Monthly", "Yearly"]
-)
+# Centered header using HTML
+st.markdown("<h2 style='text-align: center;'>📅 Forecast Settings</h2>", unsafe_allow_html=True)
+
+# Center the dropdown using columns
+col1, col2, col3 = st.columns([1, 2, 1])
+with col2:
+    forecast_freq = st.selectbox(
+        "Select Forecast Frequency",
+        ["Daily", "Weekly", "Monthly", "Yearly"]
+    )
+
 
 
 
