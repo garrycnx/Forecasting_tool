@@ -12,6 +12,14 @@ import xlsxwriter
 import warnings
 warnings.filterwarnings("ignore")
 
+
+st.sidebar.header("📅 Forecast Settings")
+forecast_freq = st.sidebar.selectbox(
+    "Select Forecast Frequency",
+    ["Daily", "Weekly", "Monthly", "Yearly"]
+)
+
+
 # Load and clean data
 def load_data(uploaded_file):
     df = pd.read_csv(uploaded_file)
